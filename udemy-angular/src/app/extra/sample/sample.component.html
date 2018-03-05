@@ -1,9 +1,20 @@
 <p>
   sample works! is kind of cool feature !
 </p>
-<h2> the value is {{title}}</h2>
+<h2> the value is {{title | uppercase }}</h2>
 <ul>
   <li *ngFor="let c of courses">
-    course {{c}}
+    course {{c | uppercase}}
   </li>
 </ul>
+
+<h1> the number is {{myNumer | number:'3.1-7'}}</h1>
+
+<h1> the date is {{myTime | date:'shortDate'}}</h1>
+
+<img src="{{imageUrl}}" height="30px" width="30px"/>
+
+<input [(ngModel)]="email" (keyup.enter)="onKeyUp()"  />
+
+<button class="btn btn-primary" [style.backgroundColor]="isActive ? 'blue' : 'black'" (click)="myClick($event)">Save
+</button>

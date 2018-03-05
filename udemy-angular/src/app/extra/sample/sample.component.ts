@@ -12,8 +12,21 @@ export class SampleComponent implements OnInit {
 
   courses:string[];
 
+  isActive:boolean = true;
+
+  email:string;
+
+  imageUrl:string = "http://brandmark.io/logo-rank/random/pepsi.png";
+  myNumer: number = 1.123;
+  myTime:Date = new Date(2018,1,1);
+
   constructor(private coursesService : CoursesService) {
       this.courses = this.coursesService.getCourses();
+  }
+
+
+  onKeyUp(){
+    console.log(this.email);
   }
 
   get title() {
@@ -23,4 +36,9 @@ export class SampleComponent implements OnInit {
   ngOnInit() {
   }
 
+  myClick($event) {
+    console.log($event);
+    $event.stopPropagation();
+    this.isActive = !this.isActive;
+  }
 }
