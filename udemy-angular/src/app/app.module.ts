@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { SampleComponent } from './extra/sample/sample.component';
 import {CoursesService} from "./extra/services/courses.service";
 import {FormsModule} from "@angular/forms";
+import { SummaryPipe } from './extra/pipes/summary.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    SampleComponent
+    SampleComponent,
+    SummaryPipe
   ],
   imports: [
     BrowserModule,

@@ -19,6 +19,7 @@ export class SampleComponent implements OnInit {
   imageUrl:string = "http://brandmark.io/logo-rank/random/pepsi.png";
   myNumer: number = 1.123;
   myTime:Date = new Date(2018,1,1);
+  longText:string = "alafdasdfasdfnsadcijsdciasddcbsadicubadsiubca";
 
   constructor(private coursesService : CoursesService) {
       this.courses = this.coursesService.getCourses();
