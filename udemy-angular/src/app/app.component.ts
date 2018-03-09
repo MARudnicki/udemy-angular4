@@ -12,6 +12,10 @@ export class AppComponent {
     body: '...',
     likesCount: 10,
     isLiked: true
+  };
+
+  onVoted(value : string){
+    console.log(value);
   }
 
 }
