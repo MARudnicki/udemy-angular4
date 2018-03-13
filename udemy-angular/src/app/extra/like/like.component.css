@@ -6,3 +6,17 @@
 .highlighted{
   color: deeppink;
 }
+span{
+  height: 50px;
+  width: 50px;
+}
+
+.fa-refresh{
+  height: 50px;
+  width: 50px;
+}
+
+.fa{
+  height: 50px;
+  width: 50px;
+}

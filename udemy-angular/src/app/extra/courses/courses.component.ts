@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import {CoursesService} from "../services/courses.service";
 
 @Component({
-  selector: 'app-sample',
-  templateUrl: './sample.component.html',
-  styleUrls: ['./sample.component.css']
+  selector: 'app-courses',
+  templateUrl: './courses.component.html',
+  styleUrls: ['./courses.component.css']
 })
-export class SampleComponent implements OnInit {
+export class CoursesComponent implements OnInit {
 
   _title:string = "title value";
 

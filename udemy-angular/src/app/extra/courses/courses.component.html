@@ -4,7 +4,21 @@
 <h2> the value is {{title | uppercase }}</h2>
 <ul>
   <li *ngFor="let c of courses">
-    course {{c | uppercase}}
+
+    <span *ngIf="c.substring(c.length,c.length-1) > 1">
+      course {{c | uppercase}}
+    </span>
+
+  </li>
+</ul>
+<h1>stop !</h1>
+<ul>
+  <li *ngFor="let c of courses">
+
+    <span [hidden] = "c.substring(c.length,c.length-1) > 1">
+      course {{c | uppercase}}
+    </span>
+
   </li>
 </ul>
 
