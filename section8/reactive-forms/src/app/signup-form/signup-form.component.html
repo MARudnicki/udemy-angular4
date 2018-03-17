@@ -1,0 +1,30 @@
+<form [formGroup]="form">
+    <div class="form-group">
+        <label for="username">Username</label>
+        <input
+            formControlName="username"
+            id="username"
+            type="text"
+            class="form-control">
+        <div *ngIf="form.get('username').touched && form.get('username').errors?.required"
+             class="alert alert-danger">
+                               Username is required
+        </div>
+
+          <div *ngIf="form.get('username').touched && form.get('username').errors?.minlength"
+               class="alert alert-danger">
+                          5 chars min
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input
+            formControlName="password"
+            id="password"
+            type="text"
+            class="form-control">
+    </div>
+    <div>{{form.value | json}}</div>
+    <div>{{form.errors | json}}</div>
+    <button class="btn btn-primary" type="submit" (click)=onClick()>Sign Up</button>
+</form>

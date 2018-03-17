@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-traversal',
+  selector: 'traversal',
   templateUrl: './traversal.component.html',
   styleUrls: ['./traversal.component.css']
 })

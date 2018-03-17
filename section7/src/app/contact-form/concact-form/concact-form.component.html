@@ -1,10 +1,37 @@
-<form>
+<form #f="ngForm" (ngSubmit)="submit(f)">
   <div class="form-group">
-    <label for="fir"
-
-
+    <label for="firstName"></label>
+    <input
+      required
+      minlength="3"
+      maxlength="15"
+      ngModel
+      name="firstName"
+      #firstName="ngModel"
+      id="firstName"
+      type="text"
+      class="form-control"
+      (click)="onClick(f)">
+    <div>
+      <!--<div class="alert alert-danger" *ngIf="!firstName.valid && firstName.touched">-->
+        <!--First name is requiered-->
+      <!--</div>-->
+      <div class="alert alert-danger" *ngIf="firstName.errors.minlength">
+        Min 3 characters
+      </div>
+      <div class="alert alert-danger" *ngIf="firstName.errors.maxlength">
+        Max 15 characters
+      </div>
+      <!--<div class="alert alert-danger" *ngIf="firstName.errors.pattern">-->
+        <!--Wrong pattern-->
+      <!--</div>-->
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="comment">comment</label>
+    <textarea id="comment" cols="30" rows="10" class="form-control"></textarea>
 
   </div>
-
+  <button class="btn btn-primary" [disabled]="!f.valid">Submit</button>
 
 </form>
